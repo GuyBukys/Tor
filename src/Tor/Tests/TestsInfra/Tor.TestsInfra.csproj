@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Bogus" Version="34.0.2" />
+    <PackageReference Include="Moq" Version="4.18.4" />
+    <PackageReference Include="Testcontainers" Version="3.4.0" />
+    <PackageReference Include="Testcontainers.PostgreSql" Version="3.4.0" />
+    <PackageReference Include="xunit" Version="2.4.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" Version="8.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="8.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <InternalsVisibleTo Include="Tor.UnitTests" />
+    <InternalsVisibleTo Include="Tor.IntegrationTests" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Tor.Api\Tor.Api.csproj" />
+    <ProjectReference Include="..\..\Tor.Application\Tor.Application.csproj" />
+    <ProjectReference Include="..\..\Tor.Infrastructure\Tor.Infrastructure.csproj" />
+  </ItemGroup>
+</Project>
